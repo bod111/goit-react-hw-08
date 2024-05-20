@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DocumentTitle from "../../components/DocumentTitle/DocumentTitle";
 import { ContactList } from "../../components/ContactList/ContactList";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { fetchTasks } from "../../redux/tasks/operations";
+import { fetchContacts } from "../../redux/contacts/operations";
 import { selectIsLoading } from "../../redux/contacts/selectors";
 
 export default function ContactsPage() {
@@ -11,7 +11,7 @@ export default function ContactsPage() {
   const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
-    dispatch(fetchTasks());
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (

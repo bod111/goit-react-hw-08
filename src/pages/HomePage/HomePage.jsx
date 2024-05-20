@@ -8,7 +8,7 @@ export default function HomePage() {
 
       <div className={css.container}>
         <h1 className={css.title}>
-          Contact manager welcome page{" "}
+          Welcome your phone book{" "}
           <span role="img" aria-label="Greeting icon">
             💁‍♀️
           </span>

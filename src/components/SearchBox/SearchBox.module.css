@@ -1,13 +1,19 @@
 .input{
   width: 324px;
   justify-content: start;
+  padding: 10px 0;
+  border-radius: 4px;
 }
 .description{ 
   text-align: left;
-  font-size: 13px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: antiquewhite;
+  
 }
 .inputBlock{
   display: flex;
   flex-direction: column;
   width: 332px;
+  
 }

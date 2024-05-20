@@ -6,7 +6,8 @@ import AuthNav from "../AuthNav/AuthNav";
 import css from "./AppBar.module.css";
 
 export default function AppBar() {
-  const { isLoggedIn } = useSelector(selectIsLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  console.log("AppBar ~ isLoggedIn:", isLoggedIn);
 
   return (
     <>

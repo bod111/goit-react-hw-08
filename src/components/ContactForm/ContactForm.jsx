@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
+import Button from "@mui/material/Button";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { addContact } from "../../redux/contacts/operations";
@@ -58,9 +59,9 @@ export default function ContactForm() {
           <ErrorMessage className={css.error} name="number" component="p" />
         </div>
 
-        <button className={css.button} type="submit">
+        <Button type="submit" variant="contained" className={css.button}>
           Add contact
-        </button>
+        </Button>
       </Form>
     </Formik>
   );

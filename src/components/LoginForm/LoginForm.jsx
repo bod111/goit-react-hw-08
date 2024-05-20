@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
+import Button from "@mui/material/Button";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { logIn } from "../../redux/auth/operations";
@@ -46,23 +47,43 @@ export default function LoginForm() {
       validationSchema={FeedbackSchema}
     >
       <Form className={css.form}>
-        <div>
+        <div className={css.contactBlock}>
           <label className={css.label} htmlFor={emailFieldId}>
             Email
           </label>
-          <Field type="email" name="email" id={emailFieldId} />
-          <ErrorMessage name="email" component="span" />
+          <Field
+            className={css.field}
+            type="email"
+            name="email"
+            id={emailFieldId}
+          />
+          <ErrorMessage className={css.error} name="email" component="span" />
         </div>
 
-        <div>
+        <div className={css.contactBlock}>
           <label className={css.label} htmlFor={passwordFieldId}>
             Password
           </label>
-          <Field type="text" name="password" id={passwordFieldId} />
-          <ErrorMessage name="password" component="span" />
+          <Field
+            className={css.field}
+            type="text"
+            name="password"
+            id={passwordFieldId}
+          />
+          <ErrorMessage
+            className={css.error}
+            name="password"
+            component="span"
+          />
         </div>
 
-        <button type="submit">Log In</button>
+        <Button
+          variant="contained"
+          type="submit"
+          sx={{ fontWeight: "800", margin: "10px 3px" }}
+        >
+          Log In
+        </Button>
       </Form>
     </Formik>
   );

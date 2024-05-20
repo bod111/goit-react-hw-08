@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useId } from "react";
+import Button from "@mui/material/Button";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
@@ -49,31 +50,56 @@ export default function RegisterForm() {
       validationSchema={FeedbackSchema}
     >
       <Form className={css.form}>
-        <div>
+        <div className={css.contactBlock}>
           <label className={css.label} htmlFor={nameFieldId}>
             Name
           </label>
-          <Field type="text" name="name" id={nameFieldId} />
-          <ErrorMessage name="name" component="span" />
+          <Field
+            className={css.field}
+            type="text"
+            name="name"
+            id={nameFieldId}
+          />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
 
-        <div>
+        <div className={css.contactBlock}>
           <label className={css.label} htmlFor={emailFieldId}>
             Email
           </label>
-          <Field type="email" name="email" id={emailFieldId} />
-          <ErrorMessage name="email" component="span" />
+          <Field
+            className={css.field}
+            type="email"
+            name="email"
+            id={emailFieldId}
+          />
+          <ErrorMessage className={css.error} name="email" component="span" />
         </div>
 
-        <div>
+        <div className={css.contactBlock}>
           <label className={css.label} htmlFor={passwordFieldId}>
             Password
           </label>
-          <Field type="text" name="password" id={passwordFieldId} />
-          <ErrorMessage name="password" component="span" />
+          <Field
+            className={css.field}
+            type="text"
+            name="password"
+            id={passwordFieldId}
+          />
+          <ErrorMessage
+            className={css.error}
+            name="password"
+            component="span"
+          />
         </div>
 
-        <button type="submit">Register</button>
+        <Button
+          variant="contained"
+          type="submit"
+          sx={{ fontWeight: "800", margin: "10px 3px" }}
+        >
+          Register
+        </Button>
       </Form>
     </Formik>
   );

@@ -6,7 +6,7 @@ import { register } from "../../redux/auth/operations";
 import css from "./RegisterForm.module.css";
 
 const FeedbackSchema = Yup.object().shape({
-  username: Yup.string()
+  name: Yup.string()
     .min(3, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
@@ -51,7 +51,7 @@ export default function RegisterForm() {
       <Form className={css.form}>
         <div>
           <label className={css.label} htmlFor={nameFieldId}>
-            Username
+            Name
           </label>
           <Field type="text" name="name" id={nameFieldId} />
           <ErrorMessage name="name" component="span" />

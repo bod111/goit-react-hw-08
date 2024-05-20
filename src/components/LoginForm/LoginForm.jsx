@@ -1,5 +1,6 @@
 import { useId } from "react";
 import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { logIn } from "../../redux/auth/operations";
@@ -24,16 +25,14 @@ export default function LoginForm() {
   const passwordFieldId = useId();
 
   const handleSubmit = (values, actions) => {
-    dispatch(
-      logIn({
-        email: values.email,
-        password: values.password,
-      })
-    )
+    console.log("handleSubmit ~ values:", values);
+    dispatch(logIn(values))
+      // logIn({
+      //   email: values.email,
+      //   password: values.password,
+      // })
       .unwrap()
-      .then(() => {
-        console.log("login success");
-      })
+      .then(() => toast.success("Login Success!!!"))
       .catch(() => {
         console.log("login error");
       });

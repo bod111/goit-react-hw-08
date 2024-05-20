@@ -1,0 +1,25 @@
+.contact{
+  display: flex;
+  flex-direction:column
+}
+.nameBlock{
+  display: flex;
+}
+.icon {
+  width: 20px;
+  display: block;
+  margin: 8px 5px 0 5px;
+
+}
+.text{
+  margin: 5px;
+  height: 20px;
+}
+ .button{
+  font-size: 15px;
+  font-weight: 600;
+  width: 70px;
+  height: 25px;
+  margin: auto 10px;
+  
+ }

@@ -1,0 +1,13 @@
+.input{
+  width: 324px;
+  justify-content: start;
+}
+.description{ 
+  text-align: left;
+  font-size: 13px;
+}
+.inputBlock{
+  display: flex;
+  flex-direction: column;
+  width: 332px;
+}

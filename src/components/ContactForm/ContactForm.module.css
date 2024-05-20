@@ -1,0 +1,24 @@
+.form{
+  border: 1px solid #292727;
+  border-radius: 5px;
+width: 322px;
+padding: 20px;
+}
+.contactBlock{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.label{
+  text-align: left;
+}
+.error{
+  font-size: 13px;
+  text-align: left;
+  color: red;
+  margin: 0;
+ 
+}
+.button{
+  margin-top: 20px;
+}

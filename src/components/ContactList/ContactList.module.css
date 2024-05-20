@@ -1,0 +1,16 @@
+.contacts{
+  display: flex;
+  flex-flow: wrap;
+  padding: 0;
+  gap: 10px;
+}
+.contact{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #424040;
+  border-radius: 5px;
+  font-weight: 600;
+  min-width: 330px;
+
+}

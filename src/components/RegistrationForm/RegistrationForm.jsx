@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { register } from "../../redux/auth/operations";
-import css from "./RegisterForm.module.css";
+import css from "./RegistrationForm.module.css";
 
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
@@ -24,7 +24,7 @@ const initialValues = {
   password: "",
 };
 
-export default function RegisterForm() {
+export default function RegistrationForm() {
   const dispatch = useDispatch();
   const nameFieldId = useId();
   const emailFieldId = useId();
